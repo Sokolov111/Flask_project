@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    {{ super() }}
+</div>
+<div class="container">
+        <div class="block_space_between first_text">
+            <h1>Соколов <br>Андрей</h1>
+            <p>Разработчик сайтов<br>20 лет</p>
+            <a href="/kabinet">Кабинет</a>
+    </div>
+    <div class="first_img block_center">
+        <img src="static/imgs/first/photo3.png" alt="avatar">
+    </div>
+</div>
+
+<div class="about_me_background">
+    <div class="container block_center about_me">
+        <h1>{{ content[0].name }}</h1>
+        <p>{{ content[0].text | safe }}
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="block_center skills">
+        <h1>{{ content[1].name }}</h1>
+        <p>{{ content[1].text | safe }}</p>
+        <div class="skills_imgs">
+            <div class="skills_card block_center">
+                <img src="static/imgs/skills/icon1.png" alt="img1">
+                <p>HTML</p>
+                <div class="skills_card_icons">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="skills_card block_center">
+                <img src="static/imgs/skills/icon2.png" alt="img2">
+                <p>CSS</p>
+                <div class="skills_card_icons">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="skills_card block_center">
+                <img src="static/imgs/skills/icon3.png" alt="img3">
+                <p>JavaScript</p>
+                <div class="skills_card_icons">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="skills_card block_center">
+                <img src="static/imgs/skills/icon4.png" alt="img4">
+                <p>PHP</p>
+                <div class="skills_card_icons">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about_me_background">
+    <div class="container portfolio block_center">
+        <h1>Портфолио</h1>
+        <img src="static/imgs/portfolio/pr1.png" alt="pr1">
+        <a href="#">CAD Academy</a>
+        <img src="static/imgs/portfolio/pr2.png" alt="pr2">
+        <a href="#">FTD Team</a>
+        <img src="static/imgs/portfolio/pr3.png" alt="pr3">
+        <a href="#">Your Watch</a>
+        <img src="static/imgs/portfolio/pr4.png" alt="pr4">
+        <a href="#">Two Sticks</a>
+        <img src="static/imgs/portfolio/pr5.png" alt="pr5">
+        <a href="#">Drone And Copters</a>
+
+    </div>
+</div>
+<footer class="container footer block_center">
+    <h1>{{ content[2].name }}</h1>
+    <p>{{ content[2].text | safe }}</p>
+    <a href="#">Отправить сообщение</a>
+    <div class="footer_contacts">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-solid fa-phone-volume"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+    </div>
+</footer>
+
+
+{% endblock %}

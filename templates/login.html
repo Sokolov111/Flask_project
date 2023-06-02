@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {{ super() }}
+</div>
+
+<div class="container">
+    <form method="POST" class="login_form block_center">
+        <p>Войти в личный кабинет</p>
+        <p><label>Логин: <input type="text" name="login" required></label></p>
+        <p><label>Пароль: <input type="password" name="psw" required></label></p>
+        <input type="submit" placeholder="Отправить">
+        <p>Нет аккаунта - <a href="/register">зарегистрироваться</a></p>
+    </form>
+</div>
+{% endblock %}

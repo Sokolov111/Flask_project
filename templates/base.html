@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link type="text/css" href="{{ url_for('static' , filename='css/all.css') }}" rel="stylesheet"/>
+    <link rel="icon" href="static/imgs/first/user.png">
+    <link rel="icon" href="static/imgs/first/user.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="static/imgs/first/user.png">
+
+    {%- block title -%}
+        {%- if title -%}
+            <title>Blog #1 - {{ title }}</title>
+        {% else %}
+            <title>Blog #1</title>
+        {%- endif -%}
+    {%- endblock -%}
+
+</head>
+<body>
+
+{%- block content -%}
+    {%- block mainmenu -%}
+        <ul class="header">
+            {%- for m in menu -%}
+                <li><a href="{{ m.url }}" class="header_link">{{ m.title }}</a></li>
+            {%- endfor -%}
+        </ul>
+    {%- endblock -%}
+{%- endblock -%}
+
+</body>
+</html>

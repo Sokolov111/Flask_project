@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS header(
+id integer PRIMARY KEY AUTOINCREMENT,
+title text NOT NULL,
+url text NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS pages(
+id integer PRIMARY KEY AUTOINCREMENT,
+name text NOT NULL,
+text text NOT NULL
+);
